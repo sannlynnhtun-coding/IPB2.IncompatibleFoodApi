@@ -16,14 +16,26 @@ namespace IPB2.IncompatibleFoodApi.Controllers
             _db = new AppDbContext();
         }
 
+
+        // async/await
         [HttpGet]
-        public IActionResult Get(int pageNo, int pagSize)
+        public async Task<IActionResult> GetAsync(int pageNo, int pageSize)
         {
-            var lst = _db.TblIncompatibleFoods
-                .Skip((pageNo - 1) * pagSize)
-                .Take(pagSize)
-                .ToList();
+            var lst2 = await GetList2(pageNo, pageSize);
+            var lst = await _db.TblIncompatibleFoods
+                .Skip((pageNo - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
             return Ok(lst);
+        }
+
+        private async Task<List<TblIncompatibleFood>> GetList2(int pageNo, int pageSize)
+        {
+            return await _db.TblIncompatibleFoods
+                .Skip((pageNo - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
         }
 
         [HttpGet("List")]

@@ -1,0 +1,6 @@
+@IPB2.IncompatibleFoodMinimalApi_HostAddress = http://localhost:5052
+
+GET {{IPB2.IncompatibleFoodMinimalApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="IPB2.IncompatibleFoodApi.Database/IPB2.IncompatibleFoodApi.Database.csproj" />
   <Project Path="IPB2.IncompatibleFoodApi/IPB2.IncompatibleFoodApi.csproj" />
+  <Project Path="IPB2.IncompatibleFoodMinimalApi/IPB2.IncompatibleFoodMinimalApi.csproj" Id="c04ca876-6d34-47ea-9a5b-d0f98686ed2b" />
 </Solution>

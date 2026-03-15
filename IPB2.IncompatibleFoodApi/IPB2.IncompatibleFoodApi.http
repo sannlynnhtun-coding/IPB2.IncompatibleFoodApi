@@ -1,6 +1,54 @@
-@IPB2.IncompatibleFoodApi_HostAddress = http://localhost:5159
+﻿@IPB2.IncompatibleFoodApi_HostAddress = http://localhost:5159
 
-GET {{IPB2.IncompatibleFoodApi_HostAddress}}/weatherforecast/
+### Get Incompatible Food List
+GET {{IPB2.IncompatibleFoodApi_HostAddress}}/api/IncompatibleFood/List?pageNo=1&pageSize=10
 Accept: application/json
 
 ###
+
+### Search Incompatible Foods
+GET {{IPB2.IncompatibleFoodApi_HostAddress}}/api/IncompatibleFood/Search?keyword=ဆူးပုတ်ရွက်&pageNo=1&pageSize=10
+Accept: application/json
+
+###
+
+### Get Category List
+GET {{IPB2.IncompatibleFoodApi_HostAddress}}/api/IncompatibleFood/CategoryList
+Accept: application/json
+
+###
+
+### Get Incompatible Food By Id
+GET {{IPB2.IncompatibleFoodApi_HostAddress}}/api/IncompatibleFood/1
+Accept: application/json
+
+###
+
+### Create Incompatible Food
+POST {{IPB2.IncompatibleFoodApi_HostAddress}}/api/IncompatibleFood
+Content-Type: application/json
+
+{
+  "foodA": "Sample Food A",
+  "foodB": "Sample Food B",
+  "description": "Sample Category"
+}
+
+###
+
+### Update Incompatible Food
+PUT {{IPB2.IncompatibleFoodApi_HostAddress}}/api/IncompatibleFood
+Content-Type: application/json
+
+{
+  "id": 1,
+  "foodA": "Updated Food A",
+  "foodB": "Updated Food B",
+  "description": "Updated Category"
+}
+
+###
+
+### Delete Incompatible Food
+DELETE {{IPB2.IncompatibleFoodApi_HostAddress}}/api/IncompatibleFood/1
+Accept: application/json

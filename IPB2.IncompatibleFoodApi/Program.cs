@@ -1,11 +1,19 @@
+using IPB2.IncompatibleFoodApi.Database.AppDbContextModels;
+using IPB2.IncompatibleFoodApi.Features.IncompatibleFoods;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// DbContext
+builder.Services.AddDbContext<AppDbContext>();
+
+// Features
+builder.Services.AddScoped<IncompatibleFoodService>();
 
 var app = builder.Build();
 

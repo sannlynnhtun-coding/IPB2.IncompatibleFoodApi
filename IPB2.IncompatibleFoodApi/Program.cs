@@ -1,6 +1,4 @@
-using IPB2.IncompatibleFoodApi.Database.AppDbContextModels;
-using IPB2.IncompatibleFoodApi.Features.IncompatibleFoods;
-using Microsoft.EntityFrameworkCore;
+using PB2.IncompatibleFood.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,11 +7,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// DbContext
-builder.Services.AddDbContext<AppDbContext>();
-
-// Features
-builder.Services.AddScoped<IncompatibleFoodService>();
+builder.AddDomain().AddDatabase();
 
 var app = builder.Build();
 

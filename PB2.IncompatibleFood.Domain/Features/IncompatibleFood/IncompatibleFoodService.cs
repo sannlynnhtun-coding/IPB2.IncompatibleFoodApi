@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using IPB2.IncompatibleFoodApi.Database.AppDbContextModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace IPB2.IncompatibleFoodApi.Features.IncompatibleFoods;
+namespace PB2.IncompatibleFood.Domain.Features.IncompatibleFood;
 
 public class IncompatibleFoodService
 {

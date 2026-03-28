@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IPB2.IncompatibleFoodApi.Database\IPB2.IncompatibleFoodApi.Database.csproj" />
+    <ProjectReference Include="..\PB2.IncompatibleFood.Domain\PB2.IncompatibleFood.Domain.csproj" />
   </ItemGroup>
 
 </Project>

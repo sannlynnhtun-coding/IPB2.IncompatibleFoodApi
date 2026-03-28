@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
-using IPB2.IncompatibleFoodApi.Features.IncompatibleFoods;
 using Microsoft.AspNetCore.Mvc;
+using PB2.IncompatibleFood.Domain.Features.IncompatibleFood;
 
-namespace IPB2.IncompatibleFoodApi.Features.IncompatibleFoods;
+namespace IPB2.IncompatibleFoodApi.Features.IncompatibleFood;
 
 [ApiController]
 [Route("api/[controller]")]

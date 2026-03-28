@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace IPB2.IncompatibleFoodApi.Features.IncompatibleFoods;
+namespace PB2.IncompatibleFood.Domain.Features.IncompatibleFood;
 
 public class IncompatibleFoodDto
 {

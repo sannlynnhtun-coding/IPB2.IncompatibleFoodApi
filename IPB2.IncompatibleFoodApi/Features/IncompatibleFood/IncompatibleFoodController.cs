@@ -51,9 +51,11 @@ public class IncompatibleFoodController : ControllerBase
         return Ok(response);
     }
 
-    [HttpPut]
-    public async Task<IActionResult> Update(UpdateIncompatibleFoodRequest request)
+    [HttpPut("{id}")]
+    [HttpPut("Update/{id}")]
+    public async Task<IActionResult> Update(int id, UpdateIncompatibleFoodRequest request)
     {
+        request.Id = id;
         var response = await _service.UpdateAsync(request);
         if (!response.Success) return NotFound(response);
         return Ok(response);
